@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* A formatação de todas as caixas estão DENTRO DO WRAPPER */ 
+.wrapper{ /*CAIXA PRINCIPAL QUE RECEBERÁ AS CAIXAS (BOX)*/
+margin: auto; /* CENTRALIZAR */
+display: flex; /* PARA TRANSFORMAR EM BLOCO*/   
+flex-direction: row; /* DIREÇÃO DAS CAIXAS TEMOS TAMBEM COLUNAS */ 
+flex-wrap: wrap; /* QUANDO ULTILIZAMOS BLOCOS ELES FICAM UM DO LADO DO OUTRO MESMO QUE TENHA TAMANHO TOTAL DE TELA, ENTÃO PARA RESOLVER ISSO ULTILIZAMOS FLEX-WRAP- */ 
+justify-content: center;/* ALINHAR OS BLOCOS NA HORIZONTAL DENTRO DO PRINCIPAL */ 
+align-items: center; /* ALINHANDO OS BLOCOS VERTICAL */
+width: 100%; /* LARGURA DO PRINCIPAL*/
+height: auto;  
+background-color: rgb(red, green, blue);
+padding: 0px; /* ESPAÇO ENTRE AS CAIXA E O PRINCIPAL */
+}
+
+.boxLogo { 
+    background-color: rgb(250, 250, 250);
+    width: 10%;
+    height: 50px;
+    margin: 0px; /* MARGEMAO REDOR DAS CAIXAS PARA FICAREM DISTANTES */ 
+}
+
+.tamanhoLogo{
+    width: 60%;
+    height: auto;
+}
+
+.boxMenu { 
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 20px;
+    margin: 0px; /* MARGEMAO REDOR DAS CAIXAS PARA FICAREM DISTANTES */ 
+}
+
+.boxBaner { 
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 500px;
+    
+}
+
+.boxBaner img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.boxCard { 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    margin: 10px;
+}
+
+.boxImg { 
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 100%;
+    margin: 0%; /* MARGEMAO REDOR DAS CAIXAS PARA FICAREM DISTANTES */ 
+}
+
+.tamanhoimg05{
+    width: 80%;
+    height: auto;
+    display: flex;
+    padding: 20px 2%;
+}
+
+.boxTexto { 
+    background-color: rgb(255, 4, 129);
+    width: 50%;
+    height: 100%;
+    margin: 0%; /* MARGEMAO REDOR DAS CAIXAS PARA FICAREM DISTANTES */ 
+}
+
+.boxInf { 
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 100%;
+    margin: 0%; /* MARGEMAO REDOR DAS CAIXAS PARA FICAREM DISTANTES */ 
+}
+
+.boxRodape { 
+    background-color: rgb(92, 92, 92);
+    width: 50%;
+    height: 100%;
+    margin: 0%; /* MARGEMAO REDOR DAS CAIXAS PARA FICAREM DISTANTES */ 
+}
+
+    h6{
+        font-family:Arial, Helvetica, sans-serif;
+        color:black;
+        text-align: center;
+        font-size: 13px;
+
+    }
+
+img{   
+    width: 100%; /* lagura */
+    height:100%; /* Altura */
+}
+
+.zoom{
+    transition: 0.3s ease;
+}
+
+.zoom:hover{
+transform: scale(1.2);
+} 
+
+</style>
+</head>
+
+<body>
+<a href="flexbox.html" > HOME | </a> 
+<a href="cardapio.html"> CARDÁPIO | </a>
+<a href="contato.html" > SOBRE NÓS |</a>
+</body>
+
+<body>
+<div class="wrapper">
+
+<div class="boxBaner">
+        <img src="Captura de tela 2025-08-30 095819.png" class="tamanhoBaner"  alt="tamanhoBaner">
+        
+</div>
+
+<div class="boxCard">
+    <p><strong>Frango com queijo cremoso</strong>
+    <p><strong>Frango com cinco queijos</strong>
+   <p><strong>Frango com cream cheese e bacon</strong>
+    <p><strong>Iscas de carne cinco queijos</strong>
+</div>
+
+<div class="boxImg">
+<img src="frango-com-queijo-cremoso.png" alt="">
+<img src="frango-com-cinco-queijos.png" alt="">
+<img src="frango_com_cream_cheese_e_bacon.png" alt="">
+<img src="iscas-de-carne-cinco-queijos (1).png" alt="">
+
+</div>
+
+<div class="boxCard">
+    <p><strong>Pistache</strong>
+    <p><strong>Nutella</strong>
+    <p><strong>Creme com morangos</strong>
+    <p><strong>Ovomaltine</strong>
+
+<img src="pistache.png" alt="">
+<img src="nutella.png" alt="">
+<img src="creme_com_morangos.png" alt="">
+<img src="ovomaltine.png" alt="">
+
+</div>
+
+<div class="boxCard">
+    <p><strong>Cafe cappuccino</strong>
+    <p><strong>Framboesa</strong>
+    <p><strong>Frutas tropicais</strong>
+    <p><strong>Limão siciliano</strong>
+
+<img src="cafe-cappuccino.png" alt="">
+<img src="framboesa.png" alt="">
+<img src="frutas_tropicais.png" alt="">
+<img src="limao_siciliano_e_gengibre.png" alt="">
+
+</div>
+
+<div class="boxCard">
+
+    <p><strong>Brownie com cobertura de chocolate</strong>
+    <p><strong>Brownie com cobertura de chocolate sorvete e chantilly</strong>
+    <p><strong>Brownie com creme crocante ovomaltine</strong>
+    <p><strong>Brownie com nutella cookies e sorvete</strong>
+
+<img src="brownie_com_cobertura_de_chocolate.png" alt="">
+<img src="brownie_com_cobertura_de_chocolate_sorvete_e_chantilly.png" alt="">
+<img src="brownie_com_creme_crocante_ovomaltine.png" alt="">
+<img src="brownie_com_nutella_cookies_e_sorvete.png" alt="">
+
+</div>
+
+ <div class="boxInf">
+        <img src="Rodape.cafe.png" alt="">
+</div>
+
+<div class="boxRodape">
+       © 2025 Café do Viajante. Todos os direitos reservados.
+</div>
+
+
+</body>
+</html>

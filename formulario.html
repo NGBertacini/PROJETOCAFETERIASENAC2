@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="formulario.html">  <!--caixa que receberá o formulario-->
+
+    <form action="post" id="fcontato" action="nycollas.gbbiruel@senac.edu.br">
+
+ <!--método post para guardar as informações 
+     id (indentificação) para chamar no css e formatar action para qual email irão os dados temos o method get para pesquisas.Ele não guarda o conteudo GET pesquisa 
+ -->
+     
+ <fieldset id="usuario"> <!-- Conjunto de campos em blocos -->
+
+<legend> Indentificação do Usuário </legend>
+<!-- Teremos uma legenda acima do bloco para indentificá-lo -->
+
+<label for="Nome"> Nome:</label>
+<input type="text" name="Nome" id="Nome" size="20" maxlength="20"
+placeholder="digite seu nome aqui" autofocus required />
+
+<!-- maxlength=qtde de caracteres que irá aceitar
+ ***size= tamanho da caixa do texto
+ *** placeholder- dica para o usuario de qual será o conteudo da caixa 
+ *** autofocus - cursor ficará dentro da caixa
+ required - e o campo será obrigatorio
+ -->
+
+ <p>
+    <label for="Senha">Senha:</label>
+    <input type="password" name="Senha" id="Senha" size="8" maxlength="8"
+    placeholder="8 dígitos" reguired /> 
+ </p>
+ <!-- required - campo obrigatório -->
+
+<p> 
+   <label for="Mail">E-mail:</label>
+   <input type="email" name="Mail" id="Mail" size="30" maxlength="30" placeholder="Ex: exemplo@mail.com" required />
+</p>
+
+<fieldset id="sexo">
+    <legend> Sexo:</legend>
+    <!--type radio para bolinhas de alternativas-->
+    <input type="radio" name="Sexo" id="Masc"/>
+    <label for="Masc"> Maculino: </label>
+    <br/> <!--break quebra de linha-->
+    <input type="radio" name="Sexo" id="Fem" />
+    <label for="Fem" >  Feminino</label>
+
+</fieldset>
+
+<p> Data de Nascimento: <input type="date" name="Nasc"  id="Nasc" />  
+</p>
+<!--aparecera o calendario. Se não aparecer é pq o navegador não está atualizado-->
+
+</fieldset>
+
+<fieldset id="endereco" >
+    <legend> Endereço do Usuário</legend>
+
+ <p>
+    <label for="Rua" > Logradouro:</label>
+    <input type="text" name="Rua" id="Rua" size="30" maxlength="50"
+    placeholder="Rua, Av, Trav,..." required />
+ </p>
+ 
+ <p>
+    
+    <label for="Num">Numero:</label>
+    <input type="number" name="Num" id="Num" min="0" max="99999" >
+
+ </p>
+
+<label for="Est" > Estado:</label>
+<!-- *** SELECT - criar caixas combinadas... 
+***SELECTED ( este coloco dentro da tag option ) - deixar o são paulo marcado
+***VALUE o que vc colocar será como o banco de dados receberá.
+Caso você não coloque ele recebera São Paulo -->
+
+<select name="Est" id="Est">
+    <optgroup label="Região Sudeste">
+    <option value="SP" selected>São Paulo</option>
+    <option value="MG"> Minas Gerais </option>
+    <option value="RJ"> Rio de Janeiro </option>
+    <option value="ES"> Espirito Santo </option>
+    </optgroup>
+
+<optgroup label="Região Sul">
+    <option value="PR"> Paraná </option>
+    <option value="SC"> Santa Catarina </option>
+    <option value="RS"> Rio Grande do sul </option>
+</optgroup>    
+
+</select>
+
+<fieldset id="mensagem">
+<legend>Mensagem do Usuário</legend>
+<p> 
+<legend for="Urg" > Grau de Urgência</legend>
+Min <input type="range" class="bar" name="Urg" id="Urg" min="0" max="10"/> Max   
+</p>
+
+<p> 
+
+<label for="Msg">Mansagem:</label> <br>
+<textarea name="Msg" id="Msg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem" >
+
+</textarea>
+</p>
+
+</fieldset>
+
+<input type="submit" name="Enviar" />
+<input type="reset" name="Limpar" />
+
+ 
+</form>        
+</div>  
+</body>
+</html>
